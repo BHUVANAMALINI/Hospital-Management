@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app = "management">
+  <head>
+    <title>Management</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <p class="notice notice_message"><%= notice %></p>
+    <p class="alert login_alert"><%= alert %></p>
+  </body>
+</html>

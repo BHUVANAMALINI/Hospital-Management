@@ -1,0 +1,24 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 login_tile">
+      <h3 align="center"><a href="/users/sign_in">LogIn</a> or <a href="/users/sign_up">Signup</a></h3>
+      <div>
+        <button type="button" class="btn btn-primary col-md-2">Facebook</button>
+        <button type="button" class="btn btn-danger col-md-offset-8 col-md-2">Google+</button>
+      </div>
+      <div class="clearfix"></div>
+      <div class="row login_hr">
+        <hr>
+        <div class="login_or">or</div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="md-form">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'form-control', :placeholder => 'email', :id => 'materialFormSubscriptionNameEx' %>
+      </div>
+      <div class="md-form email_login">
+          <%= f.password_field :password, autocomplete: "off", :id => 'materialFormSubscriptionEmailEx', :placeholder => 'password', :class => 'form-control' %>
+      </div>
+      <%= f.submit "Log in", :class => 'btn btn-info btn-block email_login' %>
+    </div>
+  </div>
+<% end %>
